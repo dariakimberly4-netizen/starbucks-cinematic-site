@@ -724,3 +724,14 @@ img {
     font-size: clamp(2.8rem, 14vw, 4.2rem);
   }
 }
+
+
+/* Mobile v4 — do not overlay copy on product photography */
+@media (max-width: 780px) {
+  .site-header { position: sticky !important; top: 0 !important; }
+  .hero { display: flex !important; flex-direction: column !important; min-height: 0 !important; overflow: visible !important; }
+  .hero-media { position: relative !important; inset: auto !important; order: 1 !important; height: auto !important; }
+  .hero-image { width: 100% !important; height: auto !important; min-height: 0 !important; object-fit: contain !important; transform: none !important; animation: none !important; }
+  .hero-copy { position: relative !important; order: 2 !important; min-height: 0 !important; padding: 28px 22px 40px !important; background: var(--cream) !important; transform: none !important; opacity: 1 !important; }
+  .hero-actions { grid-template-columns: 1fr !important; }
+}
