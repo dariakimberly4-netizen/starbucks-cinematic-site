@@ -1,11 +1,18 @@
 (() => {
   const hero = document.querySelector('[data-hero]');
   const image = document.querySelector('[data-hero-image]');
+  const video = document.querySelector('[data-hero-video]');
   const light = document.querySelector('[data-hero-light]');
   const copy = document.querySelector('[data-hero-copy]');
   const blooms = document.querySelectorAll('.coffee-bloom');
   const drops = document.querySelectorAll('.condensation');
   if (!hero || !image) return;
+  if (video) {
+    const media = video.closest('.hero-media');
+    const revealVideo = () => media?.classList.add('has-video');
+    video.addEventListener('playing', revealVideo, { once: true });
+    video.play().then(revealVideo).catch(() => {});
+  }
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let ticking = false;
@@ -20,6 +27,7 @@
         const scale = 1.12 + p * .055;
         const y = p * 34;
         image.style.transform = `scale(${scale}) translate3d(0,${y}px,0)`;
+        if (video) video.style.transform = `scale(${1.02 + p*.035}) translate3d(0,${p*20}px,0)`;
         image.style.filter = `brightness(${1 - p*.12}) saturate(${1 + p*.05})`;
         if (light) {
           light.style.transform = `translate3d(${p*14}px,${-p*12}px,0)`;
@@ -32,6 +40,7 @@
       } else {
         const scale = 1.04 + p*.02;
         image.style.transform = `scale(${scale}) translate3d(0,${p*18}px,0)`;
+        if (video) video.style.transform = `scale(${1.01 + p*.02}) translate3d(0,${p*12}px,0)`;
         if (light) light.style.transform = `translate3d(${p*9}px,${-p*7}px,0)`;
         if (copy) {
           copy.style.transform = `translate3d(0,${-p*20}px,0)`;
