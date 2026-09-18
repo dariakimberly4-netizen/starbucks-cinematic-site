@@ -7,8 +7,23 @@
   <meta name="description" content="A cinematic Starbucks-inspired demo experience." />
   <title>Starbucks Cinematic Experience</title>
   <link rel="preconnect" href="https://about.starbucks.com" />
-  <link rel="stylesheet" href="./css/global.css" />
-  <link rel="stylesheet" href="./css/motion.css" />
+  <link rel="stylesheet" href="./css/global.css?v=20260919-mobilefix3" />
+  <link rel="stylesheet" href="./css/motion.css?v=20260919-mobilefix3" />
+
+  <style>
+    @media (max-width: 780px) {
+      .hero{display:block!important;min-height:auto!important;overflow:visible!important;background:#f3eadf!important}
+      .hero-media{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;min-height:0!important;overflow:hidden!important}
+      .hero-image{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important;object-position:center center!important;transform:none!important;animation:none!important}
+      .hero-light,.hero-vignette,.scroll-cue{display:none!important}
+      .hero-copy{position:relative!important;width:100%!important;min-height:auto!important;margin:0!important;padding:30px 22px 42px!important;align-items:flex-start!important;text-align:left!important;background:#f3eadf!important;transform:none!important;opacity:1!important}
+      .hero-copy>*{width:100%!important;max-width:560px!important}
+      .hero h1{max-width:8ch!important;margin:0!important;font-size:clamp(2.8rem,14vw,4.2rem)!important;line-height:.92!important}
+      .hero-subtitle{margin-top:20px!important;max-width:30ch!important}
+      .hero-actions{width:100%!important;margin-top:28px!important;display:grid!important;grid-template-columns:1fr!important;gap:12px!important}
+      .hero-actions .button{width:100%!important;min-height:54px!important}
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -72,7 +87,7 @@
 
   <div class="future-toast" role="status" aria-live="polite" data-toast></div>
 
-  <script src="./js/navigation.js"></script>
-  <script src="./js/motion.js"></script>
+  <script src="./js/navigation.js?v=20260919-mobilefix3"></script>
+  <script src="./js/motion.js?v=20260919-mobilefix3"></script>
 </body>
 </html>
