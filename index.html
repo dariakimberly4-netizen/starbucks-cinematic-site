@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f3eadf" />
+  <meta name="description" content="A cinematic Starbucks-inspired demo experience." />
+  <title>Starbucks Cinematic Experience</title>
+  <link rel="preconnect" href="https://about.starbucks.com" />
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/motion.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="./" aria-label="Home">STARBUCKS</a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      <span></span><span></span><span></span>
+      <span class="sr-only">Open navigation</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+      <a class="active" href="./">Home</a>
+      <a href="#menu" data-future-page="Menu Orbit">Menu</a>
+      <a href="#rewards" data-future-page="Rewards">Rewards</a>
+      <a href="#about" data-future-page="About Us">About Us</a>
+      <a href="#stores" data-future-page="Stores">Stores</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title" data-hero>
+      <div class="hero-media" aria-hidden="true">
+        <img
+          class="hero-image"
+          data-hero-image
+          src="https://about.starbucks.com/uploads/2026/07/Starbucks-Fall-Menu-Preview-2026-Merch-scaled.jpg"
+          alt=""
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="hero-light" data-hero-light></div>
+        <div class="hero-vignette"></div>
+      </div>
+
+      <div class="hero-copy" data-hero-copy>
+        <p class="eyebrow reveal">HOME · PICTURE 1</p>
+        <h1 id="hero-title" class="reveal">IT STARTS WITH COFFEE.</h1>
+        <p class="hero-subtitle reveal">Crafted with care.<br />Shared through connection.</p>
+
+        <div class="hero-actions reveal">
+          <button class="button button-primary" type="button" data-future-page="Menu Orbit">Explore Menu</button>
+          <button class="button button-ghost" type="button" data-future-page="About Us">Our Story</button>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <i></i>
+      </div>
+    </section>
+
+    <section class="transition-stage" aria-label="Next home scene placeholder">
+      <div class="transition-inner">
+        <p class="eyebrow">NEXT BUILD</p>
+        <h2>Picture 2 will continue the Home journey here.</h2>
+        <p>The transition is intentionally left open so the next approved image can merge seamlessly into this page.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="future-toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="./js/navigation.js"></script>
+  <script src="./js/motion.js"></script>
+</body>
+</html>
