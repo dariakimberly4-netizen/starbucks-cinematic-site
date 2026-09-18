@@ -7,8 +7,8 @@
   <meta name="description" content="A cinematic Starbucks-inspired demo experience." />
   <title>Starbucks Cinematic Experience</title>
   <link rel="preconnect" href="https://about.starbucks.com" />
-  <link rel="stylesheet" href="./css/global.css?v=20260919-mobilefix3" />
-  <link rel="stylesheet" href="./css/motion.css?v=20260919-mobilefix3" />
+  <link rel="stylesheet" href="./css/global.css?v=20260919-mobilefix4" />
+  <link rel="stylesheet" href="./css/motion.css?v=20260919-mobilefix4" />
 
   <style>
     @media (max-width: 780px) {
@@ -21,6 +21,22 @@
       .hero h1{max-width:8ch!important;margin:0!important;font-size:clamp(2.8rem,14vw,4.2rem)!important;line-height:.92!important}
       .hero-subtitle{margin-top:20px!important;max-width:30ch!important}
       .hero-actions{width:100%!important;margin-top:28px!important;display:grid!important;grid-template-columns:1fr!important;gap:12px!important}
+      .hero-actions .button{width:100%!important;min-height:54px!important}
+    }
+  </style>
+
+  <style id="mobile-layout-v4">
+    @media (max-width: 780px) {
+      .site-header{position:sticky!important;top:0!important;background:#f3eadf!important}
+      .hero{display:flex!important;flex-direction:column!important;min-height:0!important;background:#f3eadf!important;overflow:visible!important}
+      .hero-media{position:relative!important;inset:auto!important;order:1!important;width:100%!important;height:auto!important;min-height:0!important;overflow:visible!important;background:#f3eadf!important}
+      .hero-image{display:block!important;position:relative!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important;object-position:center!important;transform:none!important;animation:none!important}
+      .hero-light,.hero-vignette,.scroll-cue{display:none!important}
+      .hero-copy{position:relative!important;order:2!important;width:100%!important;min-height:0!important;margin:0!important;padding:28px 22px 40px!important;display:block!important;text-align:left!important;background:#f3eadf!important;transform:none!important;opacity:1!important}
+      .hero-copy>*{width:100%!important;max-width:560px!important}
+      .hero h1{max-width:8ch!important;margin:0!important;font-size:clamp(2.75rem,13.5vw,4.15rem)!important;line-height:.92!important}
+      .hero-subtitle{margin:18px 0 0!important;max-width:30ch!important}
+      .hero-actions{margin-top:26px!important;display:grid!important;grid-template-columns:1fr!important;gap:12px!important;width:100%!important}
       .hero-actions .button{width:100%!important;min-height:54px!important}
     }
   </style>
@@ -87,7 +103,7 @@
 
   <div class="future-toast" role="status" aria-live="polite" data-toast></div>
 
-  <script src="./js/navigation.js?v=20260919-mobilefix3"></script>
-  <script src="./js/motion.js?v=20260919-mobilefix3"></script>
+  <script src="./js/navigation.js?v=20260919-mobilefix4"></script>
+  <script src="./js/motion.js?v=20260919-mobilefix4"></script>
 </body>
 </html>
