@@ -899,3 +899,61 @@ img {
   .scroll-cue{bottom:24px!important;}
   .cinematic-bridge{margin-top:-1px;min-height:82svh;}
 }
+
+
+/* COFFEE-IN-MOTION v7 — restrained optical motion over exact still */
+.coffee-motion{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.coffee-bloom,.condensation{position:absolute;display:block;pointer-events:none;opacity:0}
+.coffee-bloom{
+  border-radius:46% 54% 52% 48%;
+  mix-blend-mode:multiply;
+  filter:blur(12px);
+  background:
+    radial-gradient(ellipse at 50% 82%,rgba(67,28,10,.40) 0%,rgba(105,49,17,.26) 32%,rgba(166,93,48,.12) 56%,transparent 72%);
+  transform-origin:50% 90%;
+}
+.bloom-center{left:38.5%;top:39%;width:17%;height:41%}
+.bloom-right{left:61.5%;top:31%;width:17%;height:39%}
+.condensation{
+  width:10%;height:24%;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.28) 0 1px,transparent 2px),
+    radial-gradient(circle at 65% 45%,rgba(255,255,255,.20) 0 1px,transparent 2px),
+    radial-gradient(circle at 40% 78%,rgba(255,255,255,.22) 0 1px,transparent 2px);
+  background-size:19px 23px,27px 31px,23px 29px;
+  filter:blur(.15px);
+  mix-blend-mode:screen;
+}
+.condensation-center{left:42%;top:42%}
+.condensation-right{left:65%;top:35%}
+
+@keyframes coffeeBloom{
+  0%{opacity:.10;transform:translate3d(0,10px,0) scaleY(.90) rotate(-1deg)}
+  50%{opacity:.30;transform:translate3d(1px,-7px,0) scaleY(1.05) rotate(1deg)}
+  100%{opacity:.12;transform:translate3d(-1px,5px,0) scaleY(.96) rotate(0deg)}
+}
+@keyframes condensationShimmer{
+  0%,100%{opacity:.08;transform:translate3d(0,0,0)}
+  50%{opacity:.25;transform:translate3d(1px,-2px,0)}
+}
+@keyframes sunlightDrift{
+  0%{transform:translate3d(-8px,4px,0) rotate(-.5deg);opacity:.24}
+  50%{transform:translate3d(10px,-6px,0) rotate(.5deg);opacity:.38}
+  100%{transform:translate3d(-8px,4px,0) rotate(-.5deg);opacity:.24}
+}
+.coffee-bloom{animation:coffeeBloom 8s ease-in-out infinite alternate}
+.bloom-right{animation-delay:-3.2s;animation-duration:9.5s}
+.condensation{animation:condensationShimmer 5.5s ease-in-out infinite}
+.condensation-right{animation-delay:-2.4s}
+.hero-light{animation:sunlightDrift 12s ease-in-out infinite}
+
+@media(max-width:780px){
+  .coffee-motion{z-index:1}
+  .bloom-center{left:34%;top:41%;width:28%;height:35%}
+  .bloom-right{left:71%;top:34%;width:26%;height:34%}
+  .condensation-center{left:40%;top:44%;width:18%;height:22%}
+  .condensation-right{left:75%;top:37%;width:17%;height:21%}
+}
+@media(prefers-reduced-motion:reduce){
+  .coffee-bloom,.condensation,.hero-light{animation:none!important;opacity:0!important}
+}
