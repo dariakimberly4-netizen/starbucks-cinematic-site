@@ -7,7 +7,8 @@
   if (!hero || !image) return;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion) return;
+  const mobileLayout = window.matchMedia('(max-width: 780px)').matches;
+  if (reduceMotion || mobileLayout) return;
 
   let ticking = false;
 
