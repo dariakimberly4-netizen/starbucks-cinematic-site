@@ -1,0 +1,51 @@
+@keyframes heroReveal {
+  from { opacity: 0; transform: scale(1.085); }
+  to { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cueLine {
+  0%, 100% { transform: scaleY(0.25); opacity: 0.35; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+.hero-image {
+  animation: heroReveal 1600ms cubic-bezier(.22,.8,.3,1) both;
+}
+
+.reveal {
+  opacity: 0;
+  animation: riseIn 700ms cubic-bezier(.2,.7,.2,1) forwards;
+}
+
+.hero-copy .reveal:nth-child(1) { animation-delay: 380ms; }
+.hero-copy .reveal:nth-child(2) { animation-delay: 500ms; }
+.hero-copy .reveal:nth-child(3) { animation-delay: 700ms; }
+.hero-copy .reveal:nth-child(4) { animation-delay: 880ms; }
+
+.scroll-cue i {
+  animation: cueLine 1800ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+
+  .hero-image {
+    transform: none !important;
+  }
+
+  .hero-light {
+    transform: none !important;
+  }
+}
