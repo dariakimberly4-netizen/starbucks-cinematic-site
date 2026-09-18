@@ -861,3 +861,41 @@ img {
     pointer-events:none;
   }
 }
+
+
+/* CINEMATIC EXPERIENCE v6 — film, not landing page */
+.film-grain{
+  position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+.cinematic-bridge{
+  position:relative;min-height:70svh;display:grid;place-items:center;overflow:hidden;
+  color:rgba(255,255,255,.72);background:#07110d;
+}
+.cinematic-bridge::before{
+  content:"";position:absolute;inset:-20%;
+  background:radial-gradient(circle at 50% 0%,rgba(0,98,65,.72),transparent 48%);
+  filter:blur(30px);
+}
+.cinematic-bridge p{
+  position:relative;z-index:2;margin:0;font-size:clamp(.7rem,2vw,.9rem);
+  font-weight:800;letter-spacing:.34em;
+}
+.bridge-glow{
+  position:absolute;width:46vw;height:46vw;max-width:520px;max-height:520px;border-radius:50%;
+  background:rgba(0,98,65,.18);filter:blur(70px);
+}
+@media(max-width:780px){
+  .hero{height:135svh!important;min-height:135svh!important;display:block!important;}
+  .hero-media{position:sticky!important;top:0!important;height:100svh!important;min-height:100svh!important;}
+  .hero-copy{
+    position:absolute!important;left:0!important;right:0!important;bottom:35svh!important;
+    min-height:auto!important;padding:0 24px!important;display:block!important;
+  }
+  .hero h1{font-size:clamp(3.3rem,15vw,5.2rem)!important;max-width:7ch!important;}
+  .hero-subtitle{font-size:1.05rem!important;}
+  .hero-actions{display:flex!important;gap:10px!important;}
+  .hero-actions .button{font-size:.9rem!important;min-height:48px!important;}
+  .scroll-cue{bottom:24px!important;}
+  .cinematic-bridge{margin-top:-1px;min-height:82svh;}
+}
