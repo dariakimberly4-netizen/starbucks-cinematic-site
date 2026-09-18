@@ -3,6 +3,8 @@
   const image = document.querySelector('[data-hero-image]');
   const light = document.querySelector('[data-hero-light]');
   const copy = document.querySelector('[data-hero-copy]');
+  const blooms = document.querySelectorAll('.coffee-bloom');
+  const drops = document.querySelectorAll('.condensation');
   if (!hero || !image) return;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -37,6 +39,12 @@
         }
       }
     }
+    blooms.forEach((el,i)=>{
+      if (!reduceMotion) el.style.setProperty('--scroll-lift', String(p));
+    });
+    drops.forEach((el,i)=>{
+      if (!reduceMotion) el.style.transform = `translate3d(0,${-p*(4+i*2)}px,0)`;
+    });
     ticking=false;
   }
 
