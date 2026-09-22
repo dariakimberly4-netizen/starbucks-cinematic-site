@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#efe4d6" />
+  <meta name="description" content="A cinematic Starbucks Philippines Our Story experience." />
+  <title>Our Story | Starbucks Cinematic Experience</title>
+  <style>
+    :root{--cream:#efe4d6;--cream2:#f7f0e7;--ink:#17211d;--green:#006241;--green2:#003d2a;--gold:#c8a56a;--white:#fff;--shadow:0 24px 70px rgba(20,28,24,.18)}*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--cream)}body{margin:0;min-width:320px;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}.site-header{position:fixed;inset:0 0 auto;z-index:50;min-height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,54px);transition:.3s;background:linear-gradient(180deg,rgba(239,228,214,.86),rgba(239,228,214,0));backdrop-filter:blur(3px)}.site-header.scrolled{background:rgba(239,228,214,.92);backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(23,33,29,.08)}.brand{font-weight:900;letter-spacing:.16em;font-size:.92rem}.nav{display:flex;gap:clamp(18px,2.6vw,38px);font-size:.86rem;font-weight:800}.nav a{position:relative;padding:10px 0}.nav a:after{content:"";position:absolute;left:0;right:100%;bottom:3px;height:2px;background:var(--green);transition:.22s}.nav a:hover:after,.nav a.active:after{right:0}.menu{display:none;border:0;background:rgba(255,255,255,.6);width:44px;height:44px;border-radius:50%;font-size:1.1rem}.hero{min-height:100svh;position:relative;display:grid;align-items:end;overflow:hidden;isolation:isolate;background:#302117}.hero-media{position:absolute;inset:0;z-index:-3}.hero-media video,.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero-media img{filter:saturate(.82) contrast(1.03)}.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,25,20,.72) 0%,rgba(13,25,20,.38) 43%,rgba(13,25,20,.16) 70%),linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.56));z-index:1}.hero-glow{position:absolute;inset:-20%;z-index:2;background:radial-gradient(circle at 18% 28%,rgba(255,231,192,.22),transparent 35%);mix-blend-mode:screen;animation:drift 8s ease-in-out infinite alternate}.hero-copy{width:min(92%,1240px);margin:0 auto;padding:150px 0 90px;color:white}.kicker{margin:0 0 18px;font-size:.72rem;font-weight:900;letter-spacing:.22em}.hero h1{max-width:9ch;margin:0;font-size:clamp(4rem,10vw,9rem);line-height:.84;letter-spacing:-.065em}.hero p.lead{max-width:590px;font-size:clamp(1.05rem,2vw,1.35rem);line-height:1.55;margin:26px 0 0;color:rgba(255,255,255,.9)}.scroll{margin-top:38px;display:inline-flex;gap:10px;align-items:center;font-size:.72rem;font-weight:900;letter-spacing:.16em}.scroll i{width:50px;height:1px;background:rgba(255,255,255,.7);display:block}.chapter{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch;background:var(--cream2)}.chapter:nth-of-type(even){background:var(--green2);color:white}.chapter-media{position:relative;overflow:hidden;min-height:580px}.chapter-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}.chapter.show .chapter-media img{transform:scale(1)}.chapter-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.22))}.chapter-copy{padding:clamp(56px,8vw,120px);display:flex;flex-direction:column;justify-content:center}.chapter-no{font-size:.72rem;font-weight:900;letter-spacing:.2em;color:var(--green)}.chapter:nth-of-type(even) .chapter-no{color:#d9bd8d}.chapter h2{margin:20px 0 24px;font-size:clamp(2.7rem,6vw,6.4rem);line-height:.91;letter-spacing:-.055em}.chapter p{max-width:58ch;font-size:1.06rem;line-height:1.75;margin:0;opacity:.84}.chapter strong{color:var(--green)}.chapter:nth-of-type(even) strong{color:#e4c99a}.quote{min-height:78svh;display:grid;place-items:center;padding:90px 22px;background:linear-gradient(140deg,#0b4b36,#003d2a);color:white;position:relative;overflow:hidden}.quote:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(255,255,255,.1);border-radius:50%;animation:orbit 18s linear infinite}.quote-inner{position:relative;z-index:1;width:min(980px,100%);text-align:center}.quote small{letter-spacing:.2em;font-weight:900}.quote h2{font-size:clamp(2.8rem,7vw,7rem);line-height:.94;letter-spacing:-.05em;margin:24px 0}.quote p{max-width:60ch;margin:auto;line-height:1.7;color:rgba(255,255,255,.78)}.timeline{padding:110px clamp(22px,6vw,90px);background:#1f1711;color:white}.timeline h2{font-size:clamp(3rem,7vw,7rem);margin:0 0 60px;letter-spacing:-.05em}.years{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.year{border-top:1px solid rgba(255,255,255,.25);padding:26px 4px 10px}.year b{font-size:clamp(2.3rem,5vw,5rem);display:block;color:#d7b47d}.year p{line-height:1.6;color:rgba(255,255,255,.76)}.finale{min-height:90svh;position:relative;display:grid;place-items:center;text-align:center;padding:90px 22px;background:#efe4d6;overflow:hidden}.finale:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(0,98,65,.11),transparent 42%)}.finale-inner{position:relative;z-index:1;width:min(900px,100%)}.finale h2{font-size:clamp(3.2rem,8vw,8rem);line-height:.88;letter-spacing:-.06em;margin:0}.finale p{max-width:620px;margin:28px auto;line-height:1.7}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:999px;background:var(--green);color:white;font-weight:900}.footer{padding:30px 22px;background:#111b17;color:rgba(255,255,255,.65);text-align:center;font-size:.8rem}.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}.show .reveal,.reveal.show{opacity:1;transform:none}@keyframes drift{to{transform:translate3d(3%,2%,0) scale(1.04)}}@keyframes orbit{to{transform:rotate(360deg)}}@media(max-width:800px){.menu{display:block}.nav{position:fixed;top:12px;left:12px;right:12px;display:grid;background:rgba(239,228,214,.97);padding:72px 20px 20px;border-radius:24px;box-shadow:var(--shadow);transform:translateY(-130%);transition:.28s}.nav.open{transform:none}.hero-copy{padding:140px 22px 70px}.hero h1{font-size:clamp(3.2rem,18vw,6rem)}.chapter{grid-template-columns:1fr}.chapter:nth-of-type(even) .chapter-media{order:0}.chapter-media{min-height:54svh}.chapter-copy{padding:56px 22px 74px}.years{grid-template-columns:1fr}.site-header{min-height:66px}.chapter h2{font-size:clamp(2.7rem,14vw,4.5rem)}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header" id="header">
+    <a class="brand" href="../">STARBUCKS</a>
+    <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+    <nav class="nav" id="nav">
+      <a href="../">Home</a>
+      <a href="https://dariakimberly4-netizen.github.io/interactive-drink-menu/starbucks-menu-orbit/">Coffee</a>
+      <a class="active" href="./">Our Story</a>
+      <a href="#people">People</a>
+      <a href="#planet">Planet</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media">
+        <video autoplay muted loop playsinline poster="../assets/images/home/FY27-Autumn_Starbucks-Stories_Header-1024x606.webp">
+          <source src="../assets/images/home/gemini_generated_video_a8ed420d.mp4" type="video/mp4">
+        </video>
+        <img src="../assets/images/home/FY27-Autumn_Starbucks-Stories_Header-1024x606.webp" alt="Starbucks coffeehouse atmosphere">
+        <div class="hero-shade"></div><div class="hero-glow"></div>
+      </div>
+      <div class="hero-copy">
+        <p class="kicker reveal">OUR STORY</p>
+        <h1 class="reveal">MORE THAN A CUP.</h1>
+        <p class="lead reveal">Coffee begins the story. People, place, craft, and connection give it meaning.</p>
+        <a class="scroll reveal" href="#begin">FOLLOW THE STORY <i></i></a>
+      </div>
+    </section>
+
+    <section class="chapter" id="begin">
+      <div class="chapter-media"><img src="https://about.starbucks.com/uploads/2024/09/SBX20240926-BeanToCup-Feature-1024x498.jpg" alt="Coffee craft"></div>
+      <div class="chapter-copy"><span class="chapter-no reveal">CHAPTER 01 · THE BEGINNING</span><h2 class="reveal">A SMALL STORE. A BIG IDEA.</h2><p class="reveal">Starbucks began as a single store in Seattle’s Pike Place Market, built around high-quality whole bean coffee and a deep respect for the craft behind every cup. Over time, that idea grew beyond coffee itself into a place for conversation, belonging, and human connection.</p></div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-media"><img src="../assets/images/home/FY27-Autumn_Starbucks-Stories_Header-1024x606.webp" alt="Warm coffeehouse scene"></div>
+      <div class="chapter-copy"><span class="chapter-no reveal">CHAPTER 02 · THE THIRD PLACE</span><h2 class="reveal">BETWEEN HOME AND WORK.</h2><p class="reveal">The coffeehouse vision became something simple but powerful: a welcoming third place between home and work. A place to slow down, meet someone, share a thought, or simply sit with a cup and feel part of something larger.</p></div>
+    </section>
+
+    <section class="timeline" id="people">
+      <h2 class="reveal">THE STORY ARRIVES IN THE PHILIPPINES.</h2>
+      <div class="years">
+        <article class="year reveal"><b>1997</b><p>On December 4, Starbucks opened its first Philippine store at the 6750 Ayala Building in Makati City.</p></article>
+        <article class="year reveal"><b>3rd</b><p>The Philippines became Starbucks’ third market outside North America—an important milestone in the brand’s international journey.</p></article>
+        <article class="year reveal"><b>Connection</b><p>Warm hospitality, a love for coffee, and a natural desire for community helped Starbucks and Filipino coffee culture fit together.</p></article>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="quote-inner"><small class="reveal">MORE THAN JUST COFFEE</small><h2 class="reveal">EVERY CUP CAN BECOME A CONNECTION.</h2><p class="reveal">Starbucks describes its mission around every cup, every conversation, and every community—nurturing the possibilities of human connection.</p></div>
+    </section>
+
+    <section class="chapter" id="planet">
+      <div class="chapter-media"><img src="https://about.starbucks.com/uploads/2024/09/SBX20240926-BeanToCup-Feature-1024x498.jpg" alt="Coffee from bean to cup"></div>
+      <div class="chapter-copy"><span class="chapter-no reveal">CHAPTER 03 · THE CRAFT</span><h2 class="reveal">FROM BEAN TO CUP.</h2><p class="reveal">Quality remains central to the Starbucks story—from sourcing coffee to roasting with care and preparing beverages by hand. The craft is not presented as an ending, but as the beginning of what happens next: a moment shared between people.</p></div>
+    </section>
+
+    <section class="finale">
+      <div class="finale-inner"><p class="kicker reveal">THE STORY CONTINUES</p><h2 class="reveal">ONE CUP.<br>ONE CONVERSATION.<br>ONE COMMUNITY.</h2><p class="reveal">The next chapter is not only about where Starbucks came from. It is about what happens when coffee becomes a reason to connect.</p><a class="btn reveal" href="https://dariakimberly4-netizen.github.io/interactive-drink-menu/starbucks-menu-orbit/">Explore Coffee</a></div>
+    </section>
+  </main>
+
+  <footer class="footer">Cinematic concept inspired by Starbucks Philippines’ public brand story. This is an independent portfolio/demo experience.</footer>
+  <script>
+    const header=document.getElementById('header'),menu=document.getElementById('menu'),nav=document.getElementById('nav');
+    addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30),{passive:true});
+    menu.addEventListener('click',()=>nav.classList.toggle('open'));
+    nav.addEventListener('click',()=>nav.classList.remove('open'));
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');e.target.querySelectorAll('.reveal').forEach((n,i)=>setTimeout(()=>n.classList.add('show'),i*90));}}),{threshold:.18});
+    document.querySelectorAll('.chapter,.timeline,.quote,.finale').forEach(n=>io.observe(n));
+    document.querySelectorAll('.hero .reveal').forEach((n,i)=>setTimeout(()=>n.classList.add('show'),250+i*150));
+  </script>
+</body>
+</html>
